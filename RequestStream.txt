@@ -1,0 +1,16 @@
+Request method:	POST
+Request URI:	https://stgphys.appsndevs.com/forme/local/public/api/product-listing-by-id
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/json
+				Authorization=Bearer null
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "classified_id": "3594"
+}
