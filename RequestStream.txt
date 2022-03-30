@@ -3,7 +3,7 @@ Request URI:	https://stgphys.appsndevs.com/forme/local/public/api/login
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
-Form params:	email=gpavan524@gmail.com
+Form params:	email=retail_vendor@yopmail.com
 				password=12345678
 				remember_me=0
 Path params:	<none>
@@ -12,24 +12,3 @@ Headers:		Accept=*/*
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
-Request method:	POST
-Request URI:	https://stgphys.appsndevs.com/forme/local/public/api/place-orders-api
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Authorization=Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjM2ZWM2NzZmYTE5YzMwYjAyMzU3MmM2YWJmZmVlMWM4NDJlZmE0YTY5ODViYmJmOGQyZDdlM2QzYzljNjA4ZmY1Zjc5MDkzNjgwMGU5YzY0In0.eyJhdWQiOiI0IiwianRpIjoiMzZlYzY3NmZhMTljMzBiMDIzNTcyYzZhYmZmZWUxYzg0MmVmYTRhNjk4NWJiYmY4ZDJkN2UzZDNjOWM2MDhmZjVmNzkwOTM2ODAwZTljNjQiLCJpYXQiOjE2NDg2MzU0MjcsIm5iZiI6MTY0ODYzNTQyNywiZXhwIjoxNjgwMTcxNDI3LCJzdWIiOiIxNjA1Iiwic2NvcGVzIjpbXX0.p38mYJfwlY40jVE7fDrVl9xEzyCtIlektASamEkvvBH05BidyE8CnFHcv0HcjsjjwHrWtlxk5HKiDCehnVCQCkc3axBre2OyMyZa_MxKgKvAwX1uscBbjxt0sREZqmdxQzcG_iuBza1Yg4H6ImD1Eux8_jNoBpvhWuxMlL4Na79UylQABWOHS84DJnna5dJxGLUMFl1Yp4JBgVn2JNXtKPRyMgy-LdCf1F-ugjG_nuEZare-gZce255vvCezEee3yDqclanA_vtiFyey26sAMw5IkzEnshPTT87Ae-KT12RsR6jqB7Ejub7E75mldiUw5e-U_e5v3wJ21UvwjF9ICNpZpq1yzlBZJi2CCwA7iC3RX-ZPeZVnulrfuOvsNXaJOrXhZMdRZFQmsXV6gWGCrKUTdtg1qfZujC-iiyHhkCkh3oBl2az1XJwbKgQaK66DYOmSVPsujrscHCUtUkXOHjDOGsE0hCllnDz47OpymjEtBp-iELTzXuE4kqvwGhRLQEV1TyepOkaZNs-V2pnuox67IIhyvcsy4g_ddssqGMfbGglBAhyCxa8vLXVauqUceFxjvxjIAfa71kXs2c8MskgKWXaXogCkUlx6JTXE9c0HLTEJOgyZwIpxQoDQ43LFBlAvRZ0-0siRmcRlpnF24dRgNkI2V4tNGLtBsIFn0wk
-				Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "customer_address1": "Sector 32 A",
-    "shipping_message": "shipping message",
-    "customer_lname": "7410258963",
-    "promo_code": "promo",
-    "customer_fname": "terms service",
-    "delivery_option": "Express Shipping-Metro"
-}

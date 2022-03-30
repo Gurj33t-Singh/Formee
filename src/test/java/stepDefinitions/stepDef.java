@@ -149,9 +149,10 @@ public class stepDef {
 	
 	//Gets a key value from JSON for further use
 	@Then("{string} is captured")
-	public void is_captured(String Key) {
+	public void is_captured(String Key) throws IOException {
 	    // Write code here that turns the phrase above into concrete actions
 		System.out.println("Json Key \""+Key+"\": " + Utils.getJsonVal(Response, Key));
+		System.out.println(new Utils().getSheetData());
 	}
 	
 }

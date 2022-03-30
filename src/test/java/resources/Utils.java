@@ -1,10 +1,20 @@
 package resources;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Properties;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.util.NumberToTextConverter;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
@@ -14,7 +24,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.specification.RequestSpecification;
 
 public class Utils {
-
+	
 	RequestSpecification ReqSpec;
 
 	public RequestSpecification requestSpec() throws IOException {
@@ -52,4 +62,45 @@ public class Utils {
 		return js.get(Key).toString();
 	}
 	
+	
+	public ArrayList<String> getSheetData() throws IOException {
+		//loaded the sheet
+		FileInputStream fis=new FileInputStream("/home/gurjeet/eclipse-workspace/Formee/TestSheet.xlsx");
+		XSSFWorkbook workbook=new XSSFWorkbook(fis);
+		XSSFSheet sheet = null;
+		ArrayList<String> s = new ArrayList<>();
+		
+		//got count of sheets 
+		int sheetcount=workbook.getNumberOfSheets();
+		
+		//finding the desired sheet based on name
+		for (int i=0; i<sheetcount; i++) {
+			if(workbook.getSheetName(i).equalsIgnoreCase("LoginData")) {
+				sheet=workbook.getSheetAt(i);
+			}
+		}
+				
+		//get row iterator from sheet 
+		Iterator<Row> rows=sheet.rowIterator();
+		
+		while(rows.hasNext()) {
+			
+			//moving to row and getting its cell iterator
+			Iterator<Cell> cells=rows.next().cellIterator();
+			
+			//getting cell data
+			while(cells.hasNext()) {
+				
+				s.add(cells.next().getStringCellValue());
+				
+			}
+		}
+		return s;
+	}
 }
+
+
+
+
+
+
