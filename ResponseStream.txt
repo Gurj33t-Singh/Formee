@@ -1,0 +1,95 @@
+HTTP/1.1 200 OK
+Date: Wed, 30 Mar 2022 07:12:30 GMT
+Server: Apache/2.4.29 (Ubuntu)
+Cache-Control: no-cache, private
+Access-Control-Allow-Origin: *
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 59
+X-Clockwork-Id: 1648624350-5915-252452213
+X-Clockwork-Version: 4.1.8
+X-Clockwork-Path: /forme/local/public/__clockwork/
+Server-Timing: app; dur=461.11702919006; desc="Application", db; dur=220.71; desc="Database", timeline-event-total; dur=461.30394935608; desc="Total execution time.", timeline-event-initialisation; dur=16.865968704224; desc="Application initialisation.", timeline-event-boot; dur=23.414134979248; desc="Framework booting.", timeline-event-run; dur=444.43798065186; desc="Framework running."
+Set-Cookie: laravel_session=EKHqIBftD6oqSSqjZS33JLtF3slnlBIw66euaZSc; expires=Wed, 30-Mar-2022 09:12:31 GMT; Max-Age=7200; path=/; httponly
+Content-Length: 1993
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json
+
+{
+    "status": 1,
+    "msg": "login_successfully",
+    "status_code": 200,
+    "data": {
+        "id": 1605,
+        "profile_completed": 0,
+        "name": "Pavan Reddy",
+        "email": "gpavan524@gmail.com",
+        "image": "https://stgphys.appsndevs.com/forme/local/public/plugins/admin/dist/img/IMG_20200115_160859.JPG",
+        "login_type": "",
+        "user_type": "private",
+        "user_sub_type": "",
+        "mobile_no": "N/A",
+        "mobile_no_verified": 0,
+        "location": "N/A",
+        "phonecode": "+61",
+        "lat": "0.0",
+        "lng": "0.0",
+        "state": "",
+        "city": "",
+        "pincode": "",
+        "device_id": null,
+        "device_model": null,
+        "device_type": null,
+        "os_version": null,
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImFjNGNiMDBmYWM5ZmI5NTg5OWFmYTFkOTBlN2Q0NjU4MTMyNDk1YmMyNDI5MjZjNmYxNzJmZGZhZmJiMWI3MTYyZjRiMDdjZTFhYzdlZWYzIn0.eyJhdWQiOiI0IiwianRpIjoiYWM0Y2IwMGZhYzlmYjk1ODk5YWZhMWQ5MGU3ZDQ2NTgxMzI0OTViYzI0MjkyNmM2ZjE3MmZkZmFmYmIxYjcxNjJmNGIwN2NlMWFjN2VlZjMiLCJpYXQiOjE2NDg2MjQzNTAsIm5iZiI6MTY0ODYyNDM1MCwiZXhwIjoxNjgwMTYwMzUwLCJzdWIiOiIxNjA1Iiwic2NvcGVzIjpbXX0.EgPfKt4hrFiNvCVfTUB9tfFGjJ1xdvIetGxjkitethXnDT-rJdmFrDem9-iHoRmC7twRHZ59QPRHPahAaQgVuzSav5YKwNowa1VD6gd01di2ZLaTOOCMsJoDYMcVwh4-I9p7oCd_KACw3xlZhAstVxIlpC4gTwJdc6oYb51e4Zk4H2BkAhtWdj9YgrCaEG2foCdmUlWemgtfRVtnDFNESq-qSYjuHfIuhrrRFoiGezUXSXCdYFEmcYvlIaGUeg9urdtrbBrfFRdLDfJ-YgIRxFT1NBu1dV6Y8SV31izPsyrLNNysUOv7qi2jVhYaWVRl9h-V-120DYiPbwst5D0nDBmL3KQVhvONt_oYOSp2Lan8IlQylElaa6d5eZaGZl7FVk3y9GubKEHpZXBWKkKZ7u2Qqsbt-qRD1m_3liCT5gd2ynhQB6AmrfqoLqWmkGYGWwIzvNcSjHUX2Upn9kJZ9p4GFWmAtvg3Wo4Uw0VflRZiYrrrVl_ai3zpW1uUhuyX1j4lK_xlB-w0k5DBuDGJXukCnRT6PJvlGuwt58OmZ0-OgsqVA0amFnKkqspgZcxzyaLloenn0KCH-8ksrdUhhdV3leBQPbLNf6ltiYF9eh0wAqVqJERt5D00qxGhYTdVC5kIeIB18VhPPu6feRQYVcjHucROr2n1JXo44UpIjhI",
+        "network_provider": null,
+        "app_version_no": null,
+        "classifiedcount": 0,
+        "role_slug": "private",
+        "role_id": 0,
+        "business_loc": null,
+        "business_location": null,
+        "business_state": null,
+        "business_city": null,
+        "business_pincode": null,
+        "business_lat": null,
+        "business_lng": null,
+        "created_date": "17-01-2022",
+        "trader_profile_id": null,
+        "menu_skipped": 0,
+        "country": null,
+        "state_code": null,
+        "country_code": null
+    }
+}
+HTTP/1.1 200 OK
+Date: Wed, 30 Mar 2022 07:12:32 GMT
+Server: Apache/2.4.29 (Ubuntu)
+Vary: Authorization
+Cache-Control: no-cache, private
+Access-Control-Allow-Origin: *
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 59
+X-Clockwork-Id: 1648624352-7746-1833753753
+X-Clockwork-Version: 4.1.8
+X-Clockwork-Path: /forme/local/public/__clockwork/
+Server-Timing: app; dur=259.24706459045; desc="Application", db; dur=177.31; desc="Database", timeline-event-total; dur=259.43207740784; desc="Total execution time.", timeline-event-initialisation; dur=13.162136077881; desc="Application initialisation.", timeline-event-boot; dur=23.348093032837; desc="Framework booting.", timeline-event-run; dur=246.26898765564; desc="Framework running."
+Set-Cookie: laravel_session=c22zoWUUiMWkKrwiGjqobEh3o15bo9XjFg7bFlEP; expires=Wed, 30-Mar-2022 09:12:33 GMT; Max-Age=7200; path=/; httponly
+Content-Length: 174
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json
+
+{
+    "status": true,
+    "status_code": 200,
+    "msg": "Product added to cart successfully.",
+    "data": {
+        "classified_id": 3690,
+        "cart_id": 41,
+        "qty": "1",
+        "size": "1",
+        "color": "#ffdb58",
+        "cart_count": 1
+    }
+}

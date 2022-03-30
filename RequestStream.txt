@@ -1,16 +1,33 @@
 Request method:	POST
-Request URI:	https://stgphys.appsndevs.com/forme/local/public/api/product-listing-by-id
+Request URI:	https://stgphys.appsndevs.com/forme/local/public/api/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	email=gpavan524@gmail.com
+				password=12345678
+				remember_me=0
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Request method:	POST
+Request URI:	https://stgphys.appsndevs.com/forme/local/public/api/add_to_cart
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		Accept=application/json
-				Authorization=Bearer null
+Headers:		Authorization=Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImFjNGNiMDBmYWM5ZmI5NTg5OWFmYTFkOTBlN2Q0NjU4MTMyNDk1YmMyNDI5MjZjNmYxNzJmZGZhZmJiMWI3MTYyZjRiMDdjZTFhYzdlZWYzIn0.eyJhdWQiOiI0IiwianRpIjoiYWM0Y2IwMGZhYzlmYjk1ODk5YWZhMWQ5MGU3ZDQ2NTgxMzI0OTViYzI0MjkyNmM2ZjE3MmZkZmFmYmIxYjcxNjJmNGIwN2NlMWFjN2VlZjMiLCJpYXQiOjE2NDg2MjQzNTAsIm5iZiI6MTY0ODYyNDM1MCwiZXhwIjoxNjgwMTYwMzUwLCJzdWIiOiIxNjA1Iiwic2NvcGVzIjpbXX0.EgPfKt4hrFiNvCVfTUB9tfFGjJ1xdvIetGxjkitethXnDT-rJdmFrDem9-iHoRmC7twRHZ59QPRHPahAaQgVuzSav5YKwNowa1VD6gd01di2ZLaTOOCMsJoDYMcVwh4-I9p7oCd_KACw3xlZhAstVxIlpC4gTwJdc6oYb51e4Zk4H2BkAhtWdj9YgrCaEG2foCdmUlWemgtfRVtnDFNESq-qSYjuHfIuhrrRFoiGezUXSXCdYFEmcYvlIaGUeg9urdtrbBrfFRdLDfJ-YgIRxFT1NBu1dV6Y8SV31izPsyrLNNysUOv7qi2jVhYaWVRl9h-V-120DYiPbwst5D0nDBmL3KQVhvONt_oYOSp2Lan8IlQylElaa6d5eZaGZl7FVk3y9GubKEHpZXBWKkKZ7u2Qqsbt-qRD1m_3liCT5gd2ynhQB6AmrfqoLqWmkGYGWwIzvNcSjHUX2Upn9kJZ9p4GFWmAtvg3Wo4Uw0VflRZiYrrrVl_ai3zpW1uUhuyX1j4lK_xlB-w0k5DBuDGJXukCnRT6PJvlGuwt58OmZ0-OgsqVA0amFnKkqspgZcxzyaLloenn0KCH-8ksrdUhhdV3leBQPbLNf6ltiYF9eh0wAqVqJERt5D00qxGhYTdVC5kIeIB18VhPPu6feRQYVcjHucROr2n1JXo44UpIjhI
+				Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "classified_id": "3594"
+    "size": "1",
+    "classified_id": 3690,
+    "qty": "1",
+    "color": "#ffdb58"
 }

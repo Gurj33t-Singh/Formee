@@ -63,21 +63,46 @@ public class stepDef {
 	}
 
 	
-	@Given("User has payload with Classified ID {string}")
-	public void user_has_payload_with_classified_id(String ClassifiedID) throws IOException {
+	@Given("User has payload for {string}")
+	public void user_has_payload_for(String API) throws IOException {
 	    // Write code here that turns the phrase above into concrete actions
-
-		//Actual request 
-		Request=given()
-				.spec(util.requestSpec())
-				.header("Accept", "application/json")
-				.header("Authorization", "Bearer "+Token)
-				.header("Content-Type", "application/json")
-				.body(new TestDataBuild().ProductListingByID_Payload(ClassifiedID));
+		
+		switch(API) {
+		
+		case "product-listing-by-id":
+			//Actual request 
+			Request=given()
+					.spec(util.requestSpec())
+					.header("Accept", "application/json")
+					.header("Authorization", "Bearer "+Token)
+					.header("Content-Type", "application/json")
+					.body(new TestDataBuild().ProductListingByID_Payload("3594"));
+			break;
+			
+			
+		case "add_to_cart":
+			Request=given()
+					.spec(util.requestSpec())
+					.header("Authorization", "Bearer "+Token)
+					.header("Content-Type", "application/json")
+					.body(new TestDataBuild().AddToCard_Payload("1", 3690, "1", "#ffdb58"));
+			break;
+			
+		
+		case "place-orders-api":
+			Request=given()
+					.spec(util.requestSpec())
+					//.header("Accept", "application/json")
+					.header("Authorization", "Bearer "+Token)
+					.header("Content-Type", "application/json")
+					.body(new TestDataBuild().AddToCard_Payload("1", 3690, "1", "#ffdb58"));
+			break;
+		}
+		
 		
 	}
 	
-	
+	//Different API calls with switch
 	@When("User calls {string} api")
 	public void user_calls_api(String API) {
 	    // Write code here that turns the phrase above into concrete actions
@@ -91,20 +116,23 @@ public class stepDef {
 		case "product-listing-by-id":
 			Response=Request.when().post("api/"+API).then().extract().response().asString();
 			break;
+			
+		case "add_to_cart":
+			Response=Request.when().post("api/"+API).then().extract().response().asString();
+			break;
 		}
-		
+		System.out.println(Response);
 	}
 	
-	
+	//Compare actual and expected value
 	@Then("{string} key value is {string}")
 	public void key_value_is(String Key, String ExpectedValue) {
 	    // Write code here that turns the phrase above into concrete actions
-		System.out.println(Response);
 		String ActualValue=Utils.getJsonVal(Response, Key);
 		assertEquals(ActualValue, ExpectedValue);
 	}
 	
-	
+	//Gets a key value from JSON for further use
 	@Then("{string} is captured")
 	public void is_captured(String Key) {
 	    // Write code here that turns the phrase above into concrete actions

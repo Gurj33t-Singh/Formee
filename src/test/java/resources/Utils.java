@@ -1,6 +1,5 @@
 package resources;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -9,20 +8,34 @@ import java.util.Properties;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
+import io.restassured.filter.log.ResponseLoggingFilter;
+import io.restassured.filter.session.SessionFilter;
 import io.restassured.path.json.JsonPath;
 import io.restassured.specification.RequestSpecification;
 
 public class Utils {
 
-	
+	RequestSpecification ReqSpec;
+
 	public RequestSpecification requestSpec() throws IOException {
-		PrintStream ps=new PrintStream(new FileOutputStream("RequestStream.txt"));
 		
-		RequestSpecification ReqSpec=new RequestSpecBuilder()
-				.addFilter(RequestLoggingFilter.logRequestTo(ps))
-				.setBaseUri(getProperty("URI"))
-				.build();
-		return ReqSpec;
+		if(ReqSpec==null) {
+			PrintStream ReqPS=new PrintStream(new FileOutputStream("RequestStream.txt"));
+			PrintStream ResPS=new PrintStream(new FileOutputStream("ResponseStream.txt"));
+			SessionFilter Session=new SessionFilter();
+			ReqSpec=new RequestSpecBuilder()
+					.addFilter(RequestLoggingFilter.logRequestTo(ReqPS))
+					.addFilter(ResponseLoggingFilter.logResponseTo(ResPS))
+					.setBaseUri(getProperty("URI"))
+					//.addFilter(Session)
+					.build();
+			return ReqSpec;
+		}
+		
+		else {
+			return ReqSpec;
+		}
+
 	}
 	
 	
