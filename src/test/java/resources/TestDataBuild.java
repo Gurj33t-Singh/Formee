@@ -28,6 +28,7 @@ public class TestDataBuild {
 		body.setCustomer_lname(lname);
 		body.setDelivery_option(deliveryOption);
 		body.setPromo_code(promo);
+		body.setShipping_message(message);
 		return body;
 	}
 }

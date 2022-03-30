@@ -27,8 +27,20 @@ When User calls "add_to_cart" api
 Then "msg" key value is "Product added to cart successfully."
 
 @Priority
+Scenario: Verify that user is able to get cart items
+Given User is logged in with "Personal" user
+And User has payload for "cart" 
+When User calls "cart" api 
+Then "message" key value is "cart list fetched successfully"
+
+
+@Priority
 Scenario: Verify that user is able to place order 
 Given User is logged in with "Personal" user
 And User has payload for "place-orders-api" 
 When User calls "place-orders-api" api 
 Then "message" key value is "Order placed successfully"
+
+
+
+

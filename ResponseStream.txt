@@ -1,15 +1,15 @@
 HTTP/1.1 200 OK
-Date: Wed, 30 Mar 2022 07:12:30 GMT
+Date: Wed, 30 Mar 2022 10:17:07 GMT
 Server: Apache/2.4.29 (Ubuntu)
 Cache-Control: no-cache, private
 Access-Control-Allow-Origin: *
 X-RateLimit-Limit: 60
 X-RateLimit-Remaining: 59
-X-Clockwork-Id: 1648624350-5915-252452213
+X-Clockwork-Id: 1648635427-0231-127396407
 X-Clockwork-Version: 4.1.8
 X-Clockwork-Path: /forme/local/public/__clockwork/
-Server-Timing: app; dur=461.11702919006; desc="Application", db; dur=220.71; desc="Database", timeline-event-total; dur=461.30394935608; desc="Total execution time.", timeline-event-initialisation; dur=16.865968704224; desc="Application initialisation.", timeline-event-boot; dur=23.414134979248; desc="Framework booting.", timeline-event-run; dur=444.43798065186; desc="Framework running."
-Set-Cookie: laravel_session=EKHqIBftD6oqSSqjZS33JLtF3slnlBIw66euaZSc; expires=Wed, 30-Mar-2022 09:12:31 GMT; Max-Age=7200; path=/; httponly
+Server-Timing: app; dur=949.85508918762; desc="Application", db; dur=749.61; desc="Database", timeline-event-total; dur=949.94306564331; desc="Total execution time.", timeline-event-initialisation; dur=7.0431232452393; desc="Application initialisation.", timeline-event-boot; dur=24.569988250732; desc="Framework booting.", timeline-event-run; dur=942.89588928223; desc="Framework running."
+Set-Cookie: laravel_session=YiZIu8JF1MDEyIUJYYqCcOvH3NZ9qgLWVRaJLsUm; expires=Wed, 30-Mar-2022 12:17:07 GMT; Max-Age=7200; path=/; httponly
 Content-Length: 1993
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
@@ -41,7 +41,7 @@ Content-Type: application/json
         "device_model": null,
         "device_type": null,
         "os_version": null,
-        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImFjNGNiMDBmYWM5ZmI5NTg5OWFmYTFkOTBlN2Q0NjU4MTMyNDk1YmMyNDI5MjZjNmYxNzJmZGZhZmJiMWI3MTYyZjRiMDdjZTFhYzdlZWYzIn0.eyJhdWQiOiI0IiwianRpIjoiYWM0Y2IwMGZhYzlmYjk1ODk5YWZhMWQ5MGU3ZDQ2NTgxMzI0OTViYzI0MjkyNmM2ZjE3MmZkZmFmYmIxYjcxNjJmNGIwN2NlMWFjN2VlZjMiLCJpYXQiOjE2NDg2MjQzNTAsIm5iZiI6MTY0ODYyNDM1MCwiZXhwIjoxNjgwMTYwMzUwLCJzdWIiOiIxNjA1Iiwic2NvcGVzIjpbXX0.EgPfKt4hrFiNvCVfTUB9tfFGjJ1xdvIetGxjkitethXnDT-rJdmFrDem9-iHoRmC7twRHZ59QPRHPahAaQgVuzSav5YKwNowa1VD6gd01di2ZLaTOOCMsJoDYMcVwh4-I9p7oCd_KACw3xlZhAstVxIlpC4gTwJdc6oYb51e4Zk4H2BkAhtWdj9YgrCaEG2foCdmUlWemgtfRVtnDFNESq-qSYjuHfIuhrrRFoiGezUXSXCdYFEmcYvlIaGUeg9urdtrbBrfFRdLDfJ-YgIRxFT1NBu1dV6Y8SV31izPsyrLNNysUOv7qi2jVhYaWVRl9h-V-120DYiPbwst5D0nDBmL3KQVhvONt_oYOSp2Lan8IlQylElaa6d5eZaGZl7FVk3y9GubKEHpZXBWKkKZ7u2Qqsbt-qRD1m_3liCT5gd2ynhQB6AmrfqoLqWmkGYGWwIzvNcSjHUX2Upn9kJZ9p4GFWmAtvg3Wo4Uw0VflRZiYrrrVl_ai3zpW1uUhuyX1j4lK_xlB-w0k5DBuDGJXukCnRT6PJvlGuwt58OmZ0-OgsqVA0amFnKkqspgZcxzyaLloenn0KCH-8ksrdUhhdV3leBQPbLNf6ltiYF9eh0wAqVqJERt5D00qxGhYTdVC5kIeIB18VhPPu6feRQYVcjHucROr2n1JXo44UpIjhI",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjM2ZWM2NzZmYTE5YzMwYjAyMzU3MmM2YWJmZmVlMWM4NDJlZmE0YTY5ODViYmJmOGQyZDdlM2QzYzljNjA4ZmY1Zjc5MDkzNjgwMGU5YzY0In0.eyJhdWQiOiI0IiwianRpIjoiMzZlYzY3NmZhMTljMzBiMDIzNTcyYzZhYmZmZWUxYzg0MmVmYTRhNjk4NWJiYmY4ZDJkN2UzZDNjOWM2MDhmZjVmNzkwOTM2ODAwZTljNjQiLCJpYXQiOjE2NDg2MzU0MjcsIm5iZiI6MTY0ODYzNTQyNywiZXhwIjoxNjgwMTcxNDI3LCJzdWIiOiIxNjA1Iiwic2NvcGVzIjpbXX0.p38mYJfwlY40jVE7fDrVl9xEzyCtIlektASamEkvvBH05BidyE8CnFHcv0HcjsjjwHrWtlxk5HKiDCehnVCQCkc3axBre2OyMyZa_MxKgKvAwX1uscBbjxt0sREZqmdxQzcG_iuBza1Yg4H6ImD1Eux8_jNoBpvhWuxMlL4Na79UylQABWOHS84DJnna5dJxGLUMFl1Yp4JBgVn2JNXtKPRyMgy-LdCf1F-ugjG_nuEZare-gZce255vvCezEee3yDqclanA_vtiFyey26sAMw5IkzEnshPTT87Ae-KT12RsR6jqB7Ejub7E75mldiUw5e-U_e5v3wJ21UvwjF9ICNpZpq1yzlBZJi2CCwA7iC3RX-ZPeZVnulrfuOvsNXaJOrXhZMdRZFQmsXV6gWGCrKUTdtg1qfZujC-iiyHhkCkh3oBl2az1XJwbKgQaK66DYOmSVPsujrscHCUtUkXOHjDOGsE0hCllnDz47OpymjEtBp-iELTzXuE4kqvwGhRLQEV1TyepOkaZNs-V2pnuox67IIhyvcsy4g_ddssqGMfbGglBAhyCxa8vLXVauqUceFxjvxjIAfa71kXs2c8MskgKWXaXogCkUlx6JTXE9c0HLTEJOgyZwIpxQoDQ43LFBlAvRZ0-0siRmcRlpnF24dRgNkI2V4tNGLtBsIFn0wk",
         "network_provider": null,
         "app_version_no": null,
         "classifiedcount": 0,
@@ -63,19 +63,19 @@ Content-Type: application/json
     }
 }
 HTTP/1.1 200 OK
-Date: Wed, 30 Mar 2022 07:12:32 GMT
+Date: Wed, 30 Mar 2022 10:17:08 GMT
 Server: Apache/2.4.29 (Ubuntu)
 Vary: Authorization
 Cache-Control: no-cache, private
 Access-Control-Allow-Origin: *
 X-RateLimit-Limit: 60
 X-RateLimit-Remaining: 59
-X-Clockwork-Id: 1648624352-7746-1833753753
+X-Clockwork-Id: 1648635428-3129-927810782
 X-Clockwork-Version: 4.1.8
 X-Clockwork-Path: /forme/local/public/__clockwork/
-Server-Timing: app; dur=259.24706459045; desc="Application", db; dur=177.31; desc="Database", timeline-event-total; dur=259.43207740784; desc="Total execution time.", timeline-event-initialisation; dur=13.162136077881; desc="Application initialisation.", timeline-event-boot; dur=23.348093032837; desc="Framework booting.", timeline-event-run; dur=246.26898765564; desc="Framework running."
-Set-Cookie: laravel_session=c22zoWUUiMWkKrwiGjqobEh3o15bo9XjFg7bFlEP; expires=Wed, 30-Mar-2022 09:12:33 GMT; Max-Age=7200; path=/; httponly
-Content-Length: 174
+Server-Timing: app; dur=806.58292770386; desc="Application", db; dur=564.61; desc="Database", timeline-event-total; dur=806.72907829285; desc="Total execution time.", timeline-event-initialisation; dur=10.139942169189; desc="Application initialisation.", timeline-event-boot; dur=23.838043212891; desc="Framework booting.", timeline-event-run; dur=796.59008979797; desc="Framework running."
+Set-Cookie: laravel_session=fKU4mzbKaLRtuvXVIWLgmpVNsZGEQEljuiiZnU94; expires=Wed, 30-Mar-2022 12:17:09 GMT; Max-Age=7200; path=/; httponly
+Content-Length: 82
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 Content-Type: application/json
@@ -83,13 +83,6 @@ Content-Type: application/json
 {
     "status": true,
     "status_code": 200,
-    "msg": "Product added to cart successfully.",
-    "data": {
-        "classified_id": 3690,
-        "cart_id": 41,
-        "qty": "1",
-        "size": "1",
-        "color": "#ffdb58",
-        "cart_count": 1
-    }
+    "message": "Order placed successfully",
+    "data": 520
 }

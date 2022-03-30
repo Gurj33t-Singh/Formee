@@ -92,10 +92,17 @@ public class stepDef {
 		case "place-orders-api":
 			Request=given()
 					.spec(util.requestSpec())
-					//.header("Accept", "application/json")
 					.header("Authorization", "Bearer "+Token)
 					.header("Content-Type", "application/json")
-					.body(new TestDataBuild().AddToCard_Payload("1", 3690, "1", "#ffdb58"));
+					.body(new TestDataBuild().PlaceOrder_Payload("Sector 32 A", "terms service", "7410258963", "Express Shipping-Metro", "promo", "shipping message"));
+			break;
+			
+		
+		case "cart":
+			Request=given()
+			.spec(util.requestSpec())
+			.header("Authorization", "Bearer "+Token)
+			.header("Content-Type", "application/json");
 			break;
 		}
 		
@@ -120,6 +127,14 @@ public class stepDef {
 		case "add_to_cart":
 			Response=Request.when().post("api/"+API).then().extract().response().asString();
 			break;
+			
+		case "place-orders-api":
+			Response=Request.when().post("api/"+API).then().extract().response().asString();
+			break;
+			
+		case "cart":
+			Response=Request.when().post("api/"+API).then().extract().response().asString();
+			break;	
 		}
 		System.out.println(Response);
 	}
