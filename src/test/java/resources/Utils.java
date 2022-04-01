@@ -26,7 +26,8 @@ import io.restassured.specification.RequestSpecification;
 public class Utils {
 	
 	RequestSpecification ReqSpec;
-
+	
+	
 	public RequestSpecification requestSpec() throws IOException {
 		
 		if(ReqSpec==null) {
@@ -63,12 +64,12 @@ public class Utils {
 	}
 	
 	
-	public ArrayList<String> getSheetData() throws IOException {
+	public XSSFSheet getSheet() throws IOException {
+		
 		//loaded the sheet
 		FileInputStream fis=new FileInputStream("/home/gurjeet/eclipse-workspace/Formee/TestSheet.xlsx");
 		XSSFWorkbook workbook=new XSSFWorkbook(fis);
 		XSSFSheet sheet = null;
-		ArrayList<String> s = new ArrayList<>();
 		
 		//got count of sheets 
 		int sheetcount=workbook.getNumberOfSheets();
@@ -79,23 +80,42 @@ public class Utils {
 				sheet=workbook.getSheetAt(i);
 			}
 		}
+		
+		return sheet;
+	}
+	
+	
+	public ArrayList<String> getRowData(int rowNum) throws IOException {
+		ArrayList<String> array=new ArrayList<>();
 				
 		//get row iterator from sheet 
-		Iterator<Row> rows=sheet.rowIterator();
+		Iterator<Row> rows=getSheet().rowIterator();
 		
 		while(rows.hasNext()) {
-			
+		
 			//moving to row and getting its cell iterator
 			Iterator<Cell> cells=rows.next().cellIterator();
 			
 			//getting cell data
 			while(cells.hasNext()) {
+				//move to first cell
+				Cell cellVal=cells.next();
 				
-				s.add(cells.next().getStringCellValue());
-				
+				//iterate through cells based on row number
+				if(cellVal.getNumericCellValue()==rowNum) {
+					if(cellVal.getCellType()==CellType.NUMERIC) {
+						array.add(NumberToTextConverter.toText(cellVal.getNumericCellValue()));
+						
+					}
+					else{
+						array.add(cellVal.getStringCellValue());						
+					}			
+				}
+				else
+					break;
 			}
-		}
-		return s;
+		}	
+		return array;
 	}
 }
 
